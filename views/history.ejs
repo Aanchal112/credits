@@ -1,0 +1,25 @@
+<%-include("partials/header")-%>
+<div class="table_css">
+
+<table class="table table-bordered table-hover table-responsive-sm table-bordered">
+  <thead class="thead-dark">
+  <th>Sr.</th>
+  <th>Donor</th>
+  <th>Recipient</th>
+  <th> Transferred Credits</th>
+  <th>Timestamp</th>
+  </thead>
+  <% var a = 0; %>
+  <%  transactions.forEach(function(user){ %>
+    <% a+=1; %>
+  <tr>
+    <td><%= a %>.</td>
+    <td><%= user.fromUser %></td>
+    <td><%=user.ToUSer%></td>
+    <td><%= user.creditTransferred %></td>
+    <td><%=user.timestamp%></td>
+  </tr>
+  <% }) %>
+</table>
+</div>
+<%-include("partials/footer")-%>
