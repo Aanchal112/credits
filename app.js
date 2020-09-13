@@ -9,7 +9,7 @@ mongoose.set('useFindAndModify', false);
 const _ = require("lodash");
 
 
-mongoose.connect("mongodb+srv://admin-aanchal:process.env.PASS@cluster0.ecmrt.mongodb.net/creditDB?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://admin-aanchal:"+process.env.PASS+"@cluster0.ecmrt.mongodb.net/creditDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
